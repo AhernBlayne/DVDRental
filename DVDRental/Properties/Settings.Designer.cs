@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DVDRental.Properties
+namespace DVDsys.Properties
 {
 
 

@@ -8,58 +8,133 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVDRental
+
+namespace DVDsys
 {
-    public partial class frmDvd : Form
+    public partial class FrmDvd : Form
     {
-        public frmDvd()
+        
+        public FrmDvd()
         {
             InitializeComponent();
         }
 
+        private void addMembertoolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            FrmAdminAddMember addMember = new FrmAdminAddMember();
+
+            addMember.Show();
+
+            this.Hide();
+        }
+
+        private void updateMembertoolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
+            FrmAdminUpdateMember updateMember = new FrmAdminUpdateMember();
+
+            updateMember.Show();
+
+            this.Hide();
+        }
+
+        private void removeMembertoolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+
+            frmAdminDeleteMember removeMember = new frmAdminDeleteMember();
+
+            removeMember.Show();
+
+            this.Hide();
+        }
+
         private void addDVDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdminAddDvd addDvd = new frmAdminAddDvd();
+            FrmAdminAddDvd addDvd = new FrmAdminAddDvd();
 
-         
-            this.Hide();
             addDvd.Show();
+
+            this.Hide();
         }
 
         private void updateDVDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdminUpdateDvd updateDvd = new frmAdminUpdateDvd();
+            FrmAdminUpdateDvd updateDvd = new FrmAdminUpdateDvd();
 
-
-            this.Hide();
             updateDvd.Show();
-        }
-
-        private void deleteDVDToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAdminDeleteDvd deleteDvd = new frmAdminDeleteDvd();
-
 
             this.Hide();
-            deleteDvd.Show();
         }
 
-        private void rentDVDToolStripMenuItem_Click(object sender, EventArgs e)
+        private void removeDVDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCustomerRentDvd rentDvd = new frmCustomerRentDvd();
+            FrmAdminDeleteDvd removeDvd = new FrmAdminDeleteDvd();
 
+            removeDvd.Show();
 
             this.Hide();
-            rentDvd.Show();
         }
 
-        private void returnDVDToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rentDvdtoolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCustomerReturnDvd returnDvd = new frmCustomerReturnDvd();
+            FrmCustomerRent rent = new FrmCustomerRent();
 
+            rent.Show();
 
             this.Hide();
-            returnDvd.Show();
+        }
+
+        private void returnDvdtoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmCustomerReturn returnRent = new FrmCustomerReturn();
+
+            returnRent.Show();
+
+            this.Hide();
+        }
+
+        private void viewCustomerChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomerReport report = new frmCustomerReport();
+
+            report.Show();
+
+            this.Hide();
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            frmRevenueReport report = new frmRevenueReport();
+
+            report.Show();
+
+            this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuMembers_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+       /* public void mnuMembers_MouseHover(object sender, EventArgs e)
+        {
+            mnuMembers.BackColor = Color.DimGray;
+        }
+
+        public void mnuMembers_MouseLeave(object sender, EventArgs e)
+        {
+            mnuMembers.BackColor = Color.Black;
+        } */
+
+        private void FrmDvd_Load(object sender, EventArgs e)
+        {
+            //mnuMembers.MouseHover += new EventHandler(mnuMembers_MouseHover);
+           // mnuMembers.MouseLeave += new EventHandler(mnuMembers_MouseLeave);
         }
     }
 }

@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="customer.cs" />
+    <Compile Include="AgeRating.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="DVD.cs" />
     <Compile Include="frmAdminAddDvd.cs">
@@ -58,11 +60,23 @@
     <Compile Include="frmAdminAddDvd.Designer.cs">
       <DependentUpon>frmAdminAddDvd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminAddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminAddMember.Designer.cs">
+      <DependentUpon>frmAdminAddMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminDeleteDvd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdminDeleteDvd.Designer.cs">
       <DependentUpon>frmAdminDeleteDvd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminDeleteMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminDeleteMember.Designer.cs">
+      <DependentUpon>frmAdminDeleteMember.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdminUpdateDvd.cs">
       <SubType>Form</SubType>
@@ -70,17 +84,29 @@
     <Compile Include="frmAdminUpdateDvd.Designer.cs">
       <DependentUpon>frmAdminUpdateDvd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerRentDvd.cs">
+    <Compile Include="frmAdminUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomerRentDvd.Designer.cs">
-      <DependentUpon>frmCustomerRentDvd.cs</DependentUpon>
+    <Compile Include="frmAdminUpdateMember.Designer.cs">
+      <DependentUpon>frmAdminUpdateMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerReturnDvd.cs">
+    <Compile Include="frmCustomerRent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomerReturnDvd.Designer.cs">
-      <DependentUpon>frmCustomerReturnDvd.cs</DependentUpon>
+    <Compile Include="frmCustomerRent.Designer.cs">
+      <DependentUpon>frmCustomerRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerReport.Designer.cs">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerReturn.Designer.cs">
+      <DependentUpon>frmCustomerReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
@@ -88,46 +114,64 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdmin.cs">
+    <Compile Include="frmRevenueReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdmin.Designer.cs">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
+    <Compile Include="frmRevenueReport.Designer.cs">
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="rent.cs" />
-    <EmbeddedResource Include="frmAdmin.resx">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RentalItems.cs" />
+    <Compile Include="Transactions.cs" />
+    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="frmAdminAddDvd.resx">
       <DependentUpon>frmAdminAddDvd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminAddMember.resx">
+      <DependentUpon>frmAdminAddMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDeleteDvd.resx">
       <DependentUpon>frmAdminDeleteDvd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminDeleteMember.resx">
+      <DependentUpon>frmAdminDeleteMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminUpdateDvd.resx">
       <DependentUpon>frmAdminUpdateDvd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerRentDvd.resx">
-      <DependentUpon>frmCustomerRentDvd.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdminUpdateMember.resx">
+      <DependentUpon>frmAdminUpdateMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerReturnDvd.resx">
-      <DependentUpon>frmCustomerReturnDvd.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomerRent.resx">
+      <DependentUpon>frmCustomerRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerReport.resx">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerReturn.resx">
+      <DependentUpon>frmCustomerReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRevenueReport.resx">
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconfinder_user_2561496 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

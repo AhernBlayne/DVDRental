@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVDRental
+namespace DVDsys
 {
     static class Program
     {
@@ -13,10 +13,10 @@ namespace DVDRental
         /// </summary>
         [STAThread] // single threaded apartment   
         static void Main()
-        {
+     {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdmin());
+            Application.Run(new FrmDvd());
         }
     }
 }
